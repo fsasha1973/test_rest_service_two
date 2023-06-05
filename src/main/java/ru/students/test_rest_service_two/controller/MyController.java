@@ -35,6 +35,7 @@ public class MyController {
                 .errorCode("")
                 .errorMessage("")
                 .build();
+        modifyRequestService.modifyRq(request);
         Response responseAfterModify = myModifyService.modify(response);
         log.info("Исходящий response : " + String.valueOf(response));
         return new ResponseEntity<>(responseAfterModify, HttpStatus.OK);
